@@ -45,8 +45,8 @@ class HomePage {
     getTrainingLink: () => this.page.getByRole('menuitem', { name: 'Training' }),
     getCreateAccountLink: () => this.page.getByRole('link', { name: 'Create an Account' }),
     getMenLink: () =>this.page.locator('li.nav-3'),
+    getSignInLinck: () => this.page.getByRole('link',{name:'Sign In'}),
     getMenTopsLink: () => this.page.locator('#ui-id-17'),
-    getCreateAccountLink: () => this.page.getByRole('link', { name: 'Create an Account' }),
     getBottomsWomenLink: () => this.page.getByRole('menuitem', { name: 'Bottoms' }),
     getSearchTermPopularLink: () => this.page.getByRole('link', { name: 'Search Terms' }),
     getFirstCardImage: () => this.page.getByAltText('Radiant Tee'),
@@ -58,9 +58,7 @@ class HomePage {
     getWomenCategories: () => this.page.locator('.nav-2 > ul > li > a'),
     getGearMenuItem: () => this.page.getByRole("menuitem", { name: "Gear" }),
     getGearBagsSubmenuItem: () => this.page.getByRole('menuitem', { name: 'Bags' }),
-    getGearWatchesSubmenuItem: () =>
-      this.page.getByRole("menuitem", { name: "Watches" }),
-    getSignInLink: () => this.page.getByRole('link', { name: 'Sign In' }),
+    getGearWatchesSubmenuItem: () => this.page.getByRole("menuitem", { name: "Watches" }),
     getFirstCardName: () => this.page.locator('a[title="Radiant Tee"]'),
     getNavigationMenuItemsList: () => this.page.getByRole('navigation').getByRole('listitem'),
     getOrdersAndReturnsLink: () => this.page.locator('.page-wrapper footer li:has-text("Orders and Returns")'),
@@ -186,6 +184,12 @@ class HomePage {
     return new RadiantTeePage(this.page);
   }
 
+  async clickSignInLink() {
+    await this.locators.getSignInLinck().click();
+
+    return new SignInPage(this.page);
+  }
+
   async clickSaleLink() {
     await this.locators.getSaleLink().click();
 
@@ -228,12 +232,6 @@ class HomePage {
     return new GearWatchesPage(this.page);
   }
 
-
-  async clickSignInLink() {
-    await this.locators.getSignInLink().click();
-    return new SignInPage(this.page);
-  }
-
   async clickFirstCardName() {
     await this.locators.getFirstCardImage().click();
 
@@ -243,6 +241,7 @@ class HomePage {
   getFooter() {
     return new Footer(this.page);
   }
+
   async clickGearMenuItem() {
     await this.locators.getGearMenuItem().click();
 
@@ -254,6 +253,7 @@ class HomePage {
 
     return new GearBagsPage(this.page);
   }
+
   async clickOrdersAndReturnsLink() {
     await this.locators.getOrdersAndReturnsLink().click();
 

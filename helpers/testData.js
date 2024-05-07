@@ -1,3 +1,5 @@
+import { expect } from "@playwright/test";
+
 //URL
 export const BASE_URL = 'https://magento.softwaretestingboard.com';
 export const WHATS_NEW_PAGE_END_POINT = '/what-is-new.html';
@@ -34,6 +36,8 @@ export const LIST_OF_URLS_MENS_DEALS_END_POINT = [
   '/men/bottoms-men/shorts-men.html'
 ];
 
+export const CUSTOMER_ACCOUNT_CREATE_END_POINT = '/customer/account/create/';
+export const MY_ACCOUNT_PAGE_END_POINT = '/customer/account/';
 export const NAVBAR_URLs_END_POINTS = [
   '/what-is-new.html',
   '/women.html',
@@ -50,6 +54,7 @@ export const MEN_TOPS_CATEGORY_PAGES_END_POINT = [
   '/men/tops-men.html?cat=16',
   '/men/tops-men.html?cat=17'
 ];
+export const SIGN_IN_END_POINT = '/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 
 //test data
 export const WHATS_NEW_PAGE_HEADER = "What's New";
@@ -66,9 +71,12 @@ export const COMPARE_PRODUCT_PAGE_HEADER = 'Compare Products';
 export const COMPARE_PRODUCT_PAGE_ITEM_TEXT = 'Push It Messenger Bag';
 export const MY_WISHLIST_PAGE_ITEM_TEXT = 'Push It Messenger Bag';
 export const MY_WISHLIST_PAGE_HEADER = 'My Wish List';
-export const WOMEN_TOPS_HEADER = 'Tops'
+export const WOMEN_TOPS_HEADER = 'Tops';
 export const WOMEN_BOTTOMS_HEADER = 'Bottoms';
 export const GEAR_BAGS_HEADER = 'Bags';
+export const SIGN_IN_HEADER = 'Customer Login';
+export const BUTTON_REGISTRATION_TITLE = 'Create an Account';
+export const CREATE_ACCOUNT_PAGE_HEADER = /Create New Customer Account/;
 export const shoppingItem1 = {
   name: "Radiant Tee",
   price: 22.00,
@@ -95,6 +103,11 @@ function generateRandomEmail() {
   return `${mailbox}@${domain}`;
 };
 
+  function generateRandomNumber() {
+    return Math.random().toString(36).substring(2, 10)
+  }
+
+export const GEN_RANDOM_NUMBER = generateRandomNumber()
 export const EMAIL = generateRandomEmail();
 export const MY_ACCOUNT_HEADER = 'My Account';
 export const THANKS_MESSAGE = 'Thank you for registering with Main Website Store.';
