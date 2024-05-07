@@ -361,5 +361,6 @@ class HomePage {
 
     return new PushItMessengerBagPage(this.page)
   }
+
 }
 export default HomePage;
