@@ -81,7 +81,7 @@ class GearBagsPage {
     async clickListMode() {
         await this.locators.getListMode().click();
 
-        return this.page;
+        return this;
 
     }
 }
