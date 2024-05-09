@@ -23,6 +23,7 @@ import TopsWomenPage from "./topsWomenPage.js";
 import FusionBackpack from "./fusionbackpackPage.js";
 import PushItMessengerBagPage from "./pushItMessengerBagPage.js";
 import MyAccountPage from "./myAccountPage.js";
+import GearFitnessPage from "./gearFitnessPage.js";
 
 class HomePage {
   constructor(page) {
@@ -85,6 +86,7 @@ class HomePage {
     getGreetingName: (name) => this.page.locator('[class="panel header"]').filter({ hasText: `Welcome, ${name}`}),
     getWelcomeDropdown: () => this.page.locator('[class="panel header"] span[role="button"]'),
     getMyAccountLink: () => this.page.getByRole('link', {name: 'My Account'}),
+    getGearFitnessEquipmentSubmenuItem: () => this.page.getByRole("menuitem", { name: "Fitness Equipment" }),
     getMainMenuLinks: () => this.page.locator('.level-top.ui-corner-all')
   };
 
@@ -403,6 +405,13 @@ class HomePage {
 
     return new RadiantTeePage(this.page)
   }
+
+  async clickGearFitnessEquipmentSubmenuItem() {
+    await this.locators.getGearFitnessEquipmentSubmenuItem().click();
+
+    return new GearFitnessPage(this.page);
+  }
+  
   async clickMainMenuLinks(i) {
     await this.locators.getMainMenuLinks().nth(i).click();
   
