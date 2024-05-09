@@ -237,6 +237,7 @@ export const LIST_OF_COUNT_SUB_CATEGORY_ON_MEN_TOPS_PAGE = [
 
 export const SEARCH_ADVANCED_PAGE_HEADER = 'Advanced Search';
 export const LIST_CATEGORY_MEN_BOTTOMS_WITH_QUANTITY = ['Pants 12 item', 'Shorts 12 item']; 
+export const PRODUCT_LIST = 'products-list';
 
 //login  credential
 

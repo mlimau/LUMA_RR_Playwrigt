@@ -1,3 +1,5 @@
+import { TIMEOUT } from "dns";
+
 class BottomsWomenPage {
     constructor(page) {
         this.page = page;
@@ -21,7 +23,9 @@ class BottomsWomenPage {
         getShoppingOptionsMaterialOrganicCotton: () => this.page.getByText("Organic Cotton "),
         getShoppingOptionsPrice: () =>  this.page.locator(".filter-options-title").nth(10),
         getShoppingOptionsPriceSecondSubCategory: () => this.page.locator("a[href$='price=30-40']"),
-        getClearAllButton: () => this.page.getByRole('link', {name: 'Clear All'})
+        getClearAllButton: () => this.page.getByRole('link', {name: 'Clear All'}),
+        getListViewLink: () => this.page.getByTitle('List').first(),
+        getProductsListWrapper: () => this.page.locator('div.products.wrapper'),
     }
 
     async getLocatorInnerText(locator) {
@@ -91,6 +95,12 @@ class BottomsWomenPage {
 
     async clickClearAllButton() {
         await this.locators.getClearAllButton().click();
+
+        return this;
+    }
+
+     async clickListViewLink() {
+        await this.locators.getListViewLink().click();
 
         return this;
     }
