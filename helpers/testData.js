@@ -27,6 +27,9 @@ export const FUSION_BACKPACK_END_POINT = '/fusion-backpack.html';
 export const PIERCE_GYM_SHORT =  "https://magento.softwaretestingboard.com/wishlist/index/configure/id/169/product_id/1028/";
 export const SEARCH_ADVANCED_PAGE_END_POINT = '/catalogsearch/advanced/';
 export const PUSH_IT_MESSENGER_BAG_PAGE_END_POINT = '/push-it-messenger-bag.html'
+export const WOMEN_SHORTS_PAGE_END_POINT = '/women/bottoms-women/shorts-women.html'
+export const BOTTOMS_WOMEN_STYLE_BASE_LAYER_PAGE_END_POINT = '/women/bottoms-women.html?style_bottom=104';
+export const FOOTER_ORDERS_AND_RETURNS_PAGE_END_POINT = '/sales/guest/form/'
 
 export const LIST_OF_URLS_MENS_DEALS_END_POINT = [
   '/men/tops-men/hoodies-and-sweatshirts-men.html',
@@ -48,13 +51,21 @@ export const NAVBAR_URLs_END_POINTS = [
 ];
 export const GEAR_BAGS_PAGE_END_POINT = '/gear/bags.html';
 
+export const FOOTER_LINKs_URLs_END_POINTS = [
+  '/search/term/popular/',
+  '/privacy-policy-cookie-restriction-mode',
+  '/catalogsearch/advanced/'
+]; 
+
 export const MEN_TOPS_CATEGORY_PAGES_END_POINT = [
   '/men/tops-men.html?cat=14',
   '/men/tops-men.html?cat=15',
   '/men/tops-men.html?cat=16',
   '/men/tops-men.html?cat=17'
 ];
-export const SIGN_IN_END_POINT = '/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
+export const SIGN_IN_END_POINT = '/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/';
+
+export const NOTES_PAGE_URL = 'https://softwaretestingboard.com/magento-store-notes/?utm_source=magento_store&utm_medium=banner&utm_campaign=notes_promo&utm_id=notes_promotion';
 
 //test data
 export const WHATS_NEW_PAGE_HEADER = "What's New";
@@ -214,10 +225,10 @@ export const LIST_OF_SUB_CATEGORY_ON_MEN_BOTTOMS_PAGE_LOCATORS = [
 ];
 
 export const LIST_OF_SUB_CATEGORY_ON_MEN_TOPS_PAGE_LOCATORS = [
-'.filter-options-item.allow.active > div > ol > li:nth-child(1) a',
-'.filter-options-item.allow.active > div > ol > li:nth-child(2) a',
-'.filter-options-item.allow.active > div > ol > li:nth-child(3) a',
-'.filter-options-item.allow.active > div > ol > li:nth-child(4) a'];
+  '.filter-options-item.allow.active > div > ol > li:nth-child(1) a',
+  '.filter-options-item.allow.active > div > ol > li:nth-child(2) a',
+  '.filter-options-item.allow.active > div > ol > li:nth-child(3) a',
+  '.filter-options-item.allow.active > div > ol > li:nth-child(4) a'];
 
 export const LIST_LABELS_SUB_CATEGORY = [
   'Jackets',
@@ -227,6 +238,7 @@ export const LIST_LABELS_SUB_CATEGORY = [
 
 export const LIST_CATEGORY_MEN_BOTTOMS = ['Pants', 'Shorts'];
 export const ID_PARAMETERS_OF_SUB_CATEGORY_ON_MEN_BOTTOMS_PAGE = ['?cat=18', '?cat=19'];
+export const FOOTER_LINK_NAME = ['Search Terms', 'Privacy and Cookie Policy', 'Advanced Search']
 export const LOGO_ALIGNMENT = 'left';
 
 export const LIST_OF_COUNT_SUB_CATEGORY_ON_MEN_TOPS_PAGE = [
@@ -239,6 +251,9 @@ export const SEARCH_ADVANCED_PAGE_HEADER = 'Advanced Search';
 export const LIST_CATEGORY_MEN_BOTTOMS_WITH_QUANTITY = ['Pants 12 item', 'Shorts 12 item']; 
 export const PRODUCT_LIST = 'products-list';
 
+export const LIST_OF_CATEGORY_WATCHES = ['Electronic', 'Exercise', 'Fashion', 'Timepiece'];
+
+
 //login  credential
 
 export const email = 'kati24@gmail.com';
@@ -247,3 +262,18 @@ export const password = 'Password!';
 export const EMAIL_WISHLIST = 'johnLennon@gmail.com';
 export const PASSWORD_WISHLIST = 'Jonny1940!';
 
+export const USER_DATA = {
+  firstName: "Angelina-Maria",
+  lastName: "O'Neel",
+  email: generateRandomEmail(),
+  password: "RT45bb%%mm"
+}
+
+export const NEW_USER_DATA = {
+  firstName: "Bob",
+  lastName: "Tester",
+  newEmail: generateRandomEmail(),
+  oldPassword: "RT45bb%%mm",
+  newPassword: "Bob_Tester"
+}
+export const ORDERS_AND_RETURNS_PAGE_FIELDS = ['Order ID', 'Billing Last Name', 'Find Order By', 'Email'];
