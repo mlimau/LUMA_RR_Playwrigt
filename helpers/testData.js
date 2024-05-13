@@ -294,3 +294,4 @@ export const ADRESS_DATA = {
 }
 export const PAYMENT_METHOD_PAGE_END_POINT = '/checkout/#payment';
 export const CHECKOUT_ONEPAGE_SUCCESS_PAGE_END_POINT = '/checkout/onepage/success/'
+export const PRODUCT_IS_IN_STOCK_TEXT_STATUS = 'In stock'
