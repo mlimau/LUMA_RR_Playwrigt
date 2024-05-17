@@ -312,3 +312,6 @@ export const CUSTOMER_USER_DATA = {
   email: "johndoe@gmail.com",
   password: "Tester#123"
 }
+
+export const MessageComparisonList = "comparison list";
+
