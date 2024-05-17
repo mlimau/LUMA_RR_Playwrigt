@@ -22,7 +22,13 @@ class MenTopsPage{
     getCountForEachCategory: (ind) => this.page.locator(LIST_OF_COUNT_SUB_CATEGORY_ON_MEN_TOPS_PAGE[ind]),
     getCountOfItemsOnEachSubCategory: () => this.page.locator('li[class="item product product-item"]'),
     getNextLink: () => this.page.getByRole('link', { name: 'Next' }),
-    getClearAllButton: () => this.page.locator(".action.clear.filter-clear")
+    getClearAllButton: () => this.page.locator(".action.clear.filter-clear"),
+    getToolBarAmountLocator: () => this.page.locator('#toolbar-amount'),
+    getSortByLocator: () => this.page.locator('select#sorter.sorter-options').first(),
+    getAscOrderLocator: () => this.page.locator('a.action.sorter-action.sort-asc'),
+    getItemOfProductsAfterSortingByPriceLocator: () => this.page.locator('.product-items .price'),
+    getDescOrderLocator: () => this.page.locator('a.action.sorter-action.sort-desc'),
+    getDescOrderLink: () => this.page.getByRole('link', {name: 'Set Descending Direction'}),
    };
 
    async clickMenTopsStyle(){
@@ -36,11 +42,23 @@ class MenTopsPage{
       return new MenTopsPage(this.page);
    };
 
-   async clickMenTopsPrice(){
+   async expandMenTopsPriceFilterDropDown(){
       await this.locators.getMenTopsPrice().click();
 
       return this;
    };
+
+   async applyFirstMenTopsPriceFilter() {
+      await this.locators.getMenTopsListPrice().first().click({ timeout: 1000});
+
+      return this;
+   }
+
+   async getToolBarAmount() {
+      const toolbarAmount = await this.locators.getToolBarAmountLocator().allTextContents();
+      
+      return toolbarAmount.map(el => el.slice(1, -1)).shift();
+   }
 
    async getMenTopsPriceList(){
       const priceList = await this.locators.getMenTopsListPrice().allInnerTexts();
@@ -97,6 +115,18 @@ class MenTopsPage{
       await this.locators.getNextLink().click();
       
       return this;
+    }
+
+    async hoverGetDescOrderLink() {
+      await this.locators.getDescOrderLink().hover();
+
+      return this.page;
+    }
+
+    async clickGetDescOrderLink() {
+      await this.locators.getDescOrderLink().click();
+
+      return this.page;
     }
  }
 export default MenTopsPage
