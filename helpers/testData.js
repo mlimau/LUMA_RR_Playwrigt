@@ -24,7 +24,7 @@ export const ARGUS_ALL_WEATHER_TANK_PAGE_END_POINT = '/argus-all-weather-tank.ht
 export const HERO_HOODIE_PAGE_END_POINT = '/hero-hoodie.html';
 export const SIGN_IN_PAGE_END_POINT = "/customer/account/login/referer/*";
 export const FUSION_BACKPACK_END_POINT = '/fusion-backpack.html';
-export const PIERCE_GYM_SHORT =  "https://magento.softwaretestingboard.com/wishlist/index/configure/id/169/product_id/1028/";
+export const PIERCE_GYM_SHORT = "https://magento.softwaretestingboard.com/wishlist/index/configure/id/169/product_id/1028/";
 export const SEARCH_ADVANCED_PAGE_END_POINT = '/catalogsearch/advanced/';
 export const PUSH_IT_MESSENGER_BAG_PAGE_END_POINT = '/push-it-messenger-bag.html'
 export const WOMEN_SHORTS_PAGE_END_POINT = '/women/bottoms-women/shorts-women.html'
@@ -56,7 +56,7 @@ export const FOOTER_LINKs_URLs_END_POINTS = [
   '/search/term/popular/',
   '/privacy-policy-cookie-restriction-mode',
   '/catalogsearch/advanced/'
-]; 
+];
 
 export const MEN_TOPS_CATEGORY_PAGES_END_POINT = [
   '/men/tops-men.html?cat=14',
@@ -70,6 +70,7 @@ export const NOTES_PAGE_URL = 'https://softwaretestingboard.com/magento-store-no
 
 export const GEAR_FITNESS_PAGE_END_POINT = '/gear/fitness-equipment.html';
 export const SORTED_LIST_FITNESS_PAGE_ENDPOINT = '/gear/fitness-equipment.html?product_list_mode=list';
+export const GEAR_PAGE_END_POINT = '/gear.html';
 
 export const WOMEN_BOTTOMS_CATEGORIES_STYLEs_END_POINT = [
   '/women/bottoms-women.html?style_bottom=104',
@@ -129,15 +130,16 @@ function generateRandomEmail() {
   return `${mailbox}@${domain}`;
 };
 
-  function generateRandomNumber() {
-    return Math.random().toString(36).substring(2, 10)
-  }
+function generateRandomNumber() {
+  return Math.random().toString(36).substring(2, 10)
+}
 
 export const GEN_RANDOM_NUMBER = generateRandomNumber()
 export const EMAIL = generateRandomEmail();
 export const MY_ACCOUNT_HEADER = 'My Account';
 export const THANKS_MESSAGE = 'Thank you for registering with Main Website Store.';
 export const EXPECTED_ITEM_STYLE_WOMEN_BOTTOMS = ['Base Layer', 'Basic', 'Capri', 'Compression', 'Leggings', 'Parachute', 'Snug', 'Sweatpants', 'Track Pants'];
+export const EXPECTED_NUMBER_PRODUCTS_STYLEs_BOTTOMS_WOMEN = [4, 10, 8, 3, 4, 2, 5, 3, 3];
 
 export const SEARCH_VALID_VALUE = 'jacket';
 export const SEARCH_INVALID_VALUE = `${SEARCH_VALID_VALUE}test`;
@@ -263,13 +265,15 @@ export const LIST_OF_COUNT_SUB_CATEGORY_ON_MEN_TOPS_PAGE = [
   '.filter-options-item.allow.active > div > ol > li:nth-child(4) > a > span'];
 
 export const SEARCH_ADVANCED_PAGE_HEADER = 'Advanced Search';
-export const LIST_CATEGORY_MEN_BOTTOMS_WITH_QUANTITY = ['Pants 12 item', 'Shorts 12 item']; 
+export const LIST_CATEGORY_MEN_BOTTOMS_WITH_QUANTITY = ['Pants 12 item', 'Shorts 12 item'];
 export const PRODUCT_LIST = 'products-list';
 
 export const LIST_OF_CATEGORY_WATCHES = ['Electronic', 'Exercise', 'Fashion', 'Timepiece'];
 
 export const GEAR_FITNESS_NUMBER_ITEMS_IN_GRID_MODE = '11 Items';
 export const GEAR_FITNESS_NUMBER_ITEMS_IN_LIST_MODE = 'Items 1-10 of 11';
+
+export const SHOPPING_OPTIONS_FILTER_VALUE = '.filter-value';
 
 //login  credential
 
@@ -291,7 +295,8 @@ export const NEW_USER_DATA = {
   lastName: "Tester",
   newEmail: generateRandomEmail(),
   oldPassword: "RT45bb%%mm",
-  newPassword: "Bob_Tester"
+  newPassword: "Bob_Tester",
+  shortPassword: "asQW34@",
 }
 export const ORDERS_AND_RETURNS_PAGE_FIELDS = ['Order ID', 'Billing Last Name', 'Find Order By', 'Email'];
 export const MENU_GEAR_EXPECTED_ITEMS = ['Bags', 'Fitness Equipment', 'Watches'];
@@ -299,8 +304,8 @@ export const MENU_GEAR_EXPECTED_ITEMS = ['Bags', 'Fitness Equipment', 'Watches']
 export const ADRESS_DATA = {
   street: "Street",
   city: "City",
-   postal_code: "35023",
-   phone_number: "+975543621798"
+  postal_code: "35023",
+  phone_number: "+975543621798"
 }
 export const PAYMENT_METHOD_PAGE_END_POINT = '/checkout/#payment';
 export const CHECKOUT_ONEPAGE_SUCCESS_PAGE_END_POINT = '/checkout/onepage/success/'
@@ -313,6 +318,9 @@ export const CUSTOMER_USER_DATA = {
 }
 
 export const MessageComparisonList = "comparison list";
+export const CREATE_ACCOUNT_FORM_LABELS = ["First Name", "Last Name", "Email", "Password", "Confirm Password"];
+export const ACCOUNT_FORM_EMPTY_INPUTS = ["", "", "", "", ""];
+export const CREATE_ACCOUNT_PAGE_PASSWORD_ERROR_MESSAGE = "Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored.";
 
 
 export const PRODUCT_IS_IN_STOCK_TEXT_STATUS = 'In stock'
