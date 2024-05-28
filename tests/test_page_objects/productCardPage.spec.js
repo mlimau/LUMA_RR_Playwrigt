@@ -75,9 +75,9 @@ test.describe('productCardPage.spec', () => {
         const homePage = new HomePage(page);
         const productCardPage = new ProductCardPage(page)
         
-        const productCardsTitles = await productCardPage.locators.getHotSellersProductCardsItemsText()
+        const productCardsTitles = await productCardPage.locators.getHotSellersProductCardsItemsText().allInnerTexts()
         const productCardsLinks = await productCardPage.locators.getHotSellersProductCardsItemsLinks()
-        const productCardsPrice = await productCardPage.locators.getHotSellersProductCardsItemsPrice()
+        const productCardsPrice = await productCardPage.locators.getHotSellersProductCardsItemsPrice().allInnerTexts()
         
         for (let i = 0; i < productCardsLinks.length; i++) {
             await productCardPage.clickHotSellersProductCardsItemsLinks(i);
