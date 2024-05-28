@@ -71,7 +71,7 @@ test.describe('productCardPage.spec', () => {
         }
     });
        
-    test('details on product card of Hot Sellers Section: Title, Price, and Stock status are relevant to the Product page', async ({ page }) => {
+    test('verify details on product card of Hot Sellers Section: Title, Price, and Stock status are relevant to the Product page', async ({ page }) => {
         const homePage = new HomePage(page);
         const productCardPage = new ProductCardPage(page)
         
